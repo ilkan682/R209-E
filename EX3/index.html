@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcul sphère</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Légende -->
+    <h1>Calcul de la surface ou du volume d'une sphère</h1>
+
+    <!-- Image centrée -->
+    <div class="image-container">
+        <img src="https://i.ibb.co/3zv9QQS/sphere.png" alt="Sphère">
+    </div>
+
+    <!-- Formulaire -->
+    <form action="#" method="post">
+
+        <!-- Choix surface ou volume -->
+        <div class="choice">
+            <input type="radio" id="surface" name="sphere" value="surface">
+            <label for="surface">Surface</label>
+
+            <input type="radio" id="volume" name="sphere" value="volume" checked>
+            <label for="volume">Volume</label>
+        </div>
+
+        <!-- Rayon -->
+        <div class="input-rayon">
+            <label for="rayon">Rayon en mètres :</label>
+            <input type="number" id="rayon" name="rayon" step="any" required>
+        </div>
+
+        <!-- Bouton -->
+        <div class="button-container">
+            <input type="submit" value="Calculer">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

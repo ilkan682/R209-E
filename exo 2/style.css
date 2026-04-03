@@ -1,0 +1,41 @@
+/* Style pour chaque option pizza ou fruit */
+.item_pizza, .item_fruit {
+    display: block;           /* chaque option sur une ligne */
+    margin: 5px 10px;         /* espace autour */
+}
+
+/* Style pour les paragraphes (titres des sections) */
+p {
+    font-weight: bold;         /* texte en gras */
+    margin-top: 20px;          /* espace au-dessus */
+}
+
+/* Style pour le bouton envoyer */
+input[type="submit"] {
+    background-color: #007BFF;  /* bleu */
+    color: white;               /* texte blanc */
+    border: none;               /* pas de bordure */
+    padding: 10px 20px;         /* espace intérieur */
+    font-size: 16px;            /* taille du texte */
+    border-radius: 5px;         /* coins arrondis */
+    cursor: pointer;            /* curseur main */
+    transition: 0.3s;           /* transition douce */
+}
+fieldset {
+    max-width: 500px;      /* largeur maximale du bloc */
+    margin-top: 10px;      /* espace au-dessus */
+    padding: 15px;         /* un peu d’espace intérieur */
+    border: 2px solid #317ac1;  /* bordure bleue */
+    border-radius: 5px;    /* coins arrondis */
+}
+
+legend {
+    font-weight: bold;     /* texte en gras */
+    font-size: 20px;       /* taille du texte */
+    color: #317ac1;        /* bleu */
+}
+
+/* Effet au survol du bouton */
+input[type="submit"]:hover {
+    background-color: #0056b3;  /* bleu plus foncé */
+}

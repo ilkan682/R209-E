@@ -1,0 +1,70 @@
+/* Corps de la page */
+body {
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.form-container {
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Légende (titre) */
+h1 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #317AC1;
+    margin-bottom: 15px;
+}
+
+/* Image centrée */
+.image-container img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+/* Choix radio */
+.choice {
+    margin: 15px 0;
+}
+
+.choice input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Rayon */
+.input-rayon {
+    margin: 15px 0;
+}
+
+.input-rayon input {
+    width: 150px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* Bouton */
+.button-container input[type="submit"] {
+    background-color: #317AC1;
+    color: white;
+    border: none;
+    width: 240px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container input[type="submit"]:hover {
+    background-color: #245a91;
+}

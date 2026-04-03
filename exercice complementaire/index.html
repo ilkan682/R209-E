@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Choix de confitures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form method="GET" action="bilan_de_commande.php">
+
+    <fieldset>
+        <legend>Votre TOP 3 de confitures préférées</legend>
+
+        <!-- Premier choix -->
+        <div>
+            <label for="conf1">1er choix :</label>
+            <select id="conf1" name="conf1">
+                <option value="" disabled selected hidden>Faites un choix...</option>
+                <option value="fraise">Fraise</option>
+                <option value="abricot">Abricot</option>
+                <option value="framboise">Framboise</option>
+                <option value="mures">Mûres</option>
+                <option value="myrtille">Myrtille</option>
+            </select>
+        </div>
+
+        <!-- Deuxième choix -->
+        <div>
+            <label for="conf2">2e choix :</label>
+            <select id="conf2" name="conf2">
+                <option value="" disabled selected hidden>Faites un choix...</option>
+                <option value="fraise">Fraise</option>
+                <option value="abricot">Abricot</option>
+                <option value="framboise">Framboise</option>
+                <option value="mures">Mûres</option>
+                <option value="myrtille">Myrtille</option>
+            </select>
+        </div>
+
+        <!-- Troisième choix -->
+        <div>
+            <label for="conf3">3e choix :</label>
+            <select id="conf3" name="conf3">
+                <option value="" disabled selected hidden>Faites un choix...</option>
+                <option value="fraise">Fraise</option>
+                <option value="abricot">Abricot</option>
+                <option value="framboise">Framboise</option>
+                <option value="mures">Mûres</option>
+                <option value="myrtille">Myrtille</option>
+            </select>
+        </div>
+
+        <!-- Bouton envoyer -->
+        <div>
+            <input type="submit" value="Envoyer">
+        </div>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>

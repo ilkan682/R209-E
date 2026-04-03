@@ -1,0 +1,38 @@
+/* Corps de la page */
+body {
+    background-color: #e0e0e0;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Bouton envoyer */
+input[type="submit"] {
+    color: white;
+    background-color: #317ac1;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 240px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Espacement des divs */
+div {
+    margin-top: 20px;
+}
+
+/* Légende */
+legend {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Select */
+select {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+}
