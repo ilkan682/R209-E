@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>tttttttttt</title>
-    <link rel="stylesheet" href="style.css">
+ {% load static %}
+<link rel="stylesheet" href="{% static 'myfirstapp/formulaire.css' %}">
+    <title>index</title>
+
 </head>
-<
+<body>
+ {% if nom is not None %}
+   <h1> Hello {{nom}} </h1>
+ {% else %}
+ <h1> Hello World </h1>
+{% endif %}
+</body>
 </html>
