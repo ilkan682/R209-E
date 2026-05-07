@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     {% load static %}
-<link rel="stylesheet" href="{% static 'myfirstapp/formulaire.css' %}">
-
+    <link rel="stylesheet" href="{% static 'myfirstapp/formulaire.css' %}">
 
     <title>bonjour</title>
 </head>
 <body>
+
     {% if nom != "" %}
-    <h1> Hello {{nom}} </h1>
+        {% if prenom != "" %}
+            <h1>Hello {{ nom }} {{ prenom }}</h1>
+        {% else %}
+            <h1>Hello {{ nom }}</h1>
+        {% endif %}
     {% else %}
-    <h1> Hello world </h1>
+        <h1>Hello world</h1>
     {% endif %}
+
 </body>
 </html>

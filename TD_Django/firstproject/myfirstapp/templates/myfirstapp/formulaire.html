@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% load static %}
-<link rel="stylesheet" href="{% static 'myfirstapp/formulaire.css' %}">
-    <title>Title</title>
+ {% extends "myfirstapp/main.html" %} <!
 
-</head>
-<body>
-    <form action="/myfirstapp/bonjour/" method="GET">
-
-        <div class="champ">
-            <label for="nom">Nom : </label>
-            <input type="text" name="nom">
-        </div>
-        <div class="champ">
+{%block title %}
+     Mon formulaire
+ {%endblock %}
+ {%block content %}
+     {{block.super}}
+     <form action="/myfirstapp/bonjour/" method="GET">
+        {% csrf_token %}
             <label for="prenom">Prénom : </label>
             <input type="text" name="prenom">
-        </div>
-        <div class="champ">
+            <label for="nom">nom : </label>
+            <input type="text" name="nom">
             <input type="submit" value="Envoyer">
-        </div>
     </form>
-</body>
-</html>
+{%endblock %}
