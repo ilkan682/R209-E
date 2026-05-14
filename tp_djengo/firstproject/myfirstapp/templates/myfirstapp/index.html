@@ -1,0 +1,33 @@
+<!-- myfirstapp/templates/myfirstapp/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma Bibliothèque</title>
+</head>
+<body>
+    <h1>Liste des livres</h1>
+
+    <!-- Lien vers le formulaire d'ajout (Section XI : Ergonomie) -->
+    <a href="/myfirstapp/ajout/">Ajouter un nouveau livre</a>
+    <hr>
+
+    <ul>
+        <!-- On fait une boucle sur la liste transmise par la vue (Section VI) -->
+        {% for livre in liste %}
+            <li>
+                <!-- Affiche le livre via la méthode __str__ définie dans models.py -->
+                <strong>{{ livre }}</strong>
+
+                <br>
+                <!-- Liens pour les actions du CRUD (Section XI) -->
+                <a href="/myfirstapp/affiche/{{ livre.id }}/">Voir les détails</a> |
+                <a href="/myfirstapp/update/{{ livre.id }}/">Modifier</a> |
+                <a href="/myfirstapp/delete/{{ livre.id }}/" onclick="return confirm('Supprimer ce livre ?')">Supprimer</a>
+            </li>
+            <br>
+        {% empty %}
+            <li>Aucun livre dans la bibliothèque pour le moment.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
