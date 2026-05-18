@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Garage - Tableau de bord</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .badge { padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .reparation { background-color: #ffeeba; color: #856404; }
+        .dispo { background-color: #d4edda; color: #155724; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestion du Garage</h1>
+    <h3>Liste des véhicules en atelier</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Année</th>
+                <th>Immatriculation</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for voiture in voitures %}
+            <tr>
+                <td>{{ voiture.marque }}</td>
+                <td>{{ voiture.modele }}</td>
+                <td>{{ voiture.annee }}</td>
+                <td>{{ voiture.immatriculation }}</td>
+                <td>
+                    {% if voiture.en_reparation %}
+                        <span class="badge reparation">En cours de réparation</span>
+                    {% else %}
+                        <span class="badge dispo">Prête / Dispo</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">Aucune voiture enregistrée pour le moment.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
