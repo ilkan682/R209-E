@@ -1,5 +1,5 @@
-<form method="post" action="myfirstapp/traitementupdate/{{id}}">
+<form method="post" action="{% url 'ajout' %}">
     {% csrf_token %}
     {{ form.as_ul }}
-     <input type="submit" value="envoyer␣les␣données"\>
+    <input type="submit" value="Ajouter les données">
 </form>

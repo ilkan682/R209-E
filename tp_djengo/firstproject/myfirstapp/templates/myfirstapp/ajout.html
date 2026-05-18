@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-  <title>Title</title>
+    <title>Ajouter des données</title>
 </head>
 <body>
-      <form method="post" action="/myfirstapp/traitementupdate/">
-      {% csrf_token %}
-      {{ form.as_ul }}
-      <input type="submit" value="envoyer␣les␣données"\>
+    <!-- Remplacement de l'action par la balise dynamique de Django pour l'ajout -->
+    <form method="post" action="{% url 'ajout' %}">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Envoyer les données">
     </form>
 </body>
 </html>
