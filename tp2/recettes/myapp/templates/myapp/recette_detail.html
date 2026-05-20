@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détail recette</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+
+</head>
+<body>
+
+<h1>{{ recette.titre }}</h1>
+
+<p>Créé par : {{ recette.createur }}</p>
+<p>Temps : {{ recette.temps_preparation }} min</p>
+<p>Description : {{ recette.description }}</p>
+
+<h2>Ingrédients</h2>
+
+<ul>
+{% for i in recette.ingredient_set.all %}
+    <li>{{ i.nom }} - {{ i.quantite }}</li>
+{% empty %}
+    <li>Aucun ingrédient</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'recette_list' %}">Retour</a>
+
+</body>
+</html>

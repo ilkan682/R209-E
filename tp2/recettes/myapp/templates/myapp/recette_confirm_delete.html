@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Supprimer recette</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+<h1>Supprimer {{ recette.titre }} ?</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui supprimer</button>
+</form>
+
+<a href="{% url 'recette_list' %}">Annuler</a>
+
+</body>
+</html>

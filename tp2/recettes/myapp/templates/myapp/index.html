@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recettes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+    <h1>Gestion des recettes</h1>
+
+    <ul>
+        <li><a href="{% url 'recette_list' %}">Liste des recettes</a></li>
+        <li><a href="{% url 'recette_add' %}">Ajouter une recette</a></li>
+        <li><a href="{% url 'ingredient_form' %}">Ajouter un ingrédient</a></li>
+    </ul>
+
+</body>
+</html>
