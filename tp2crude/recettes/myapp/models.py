@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Recette(models.Model):
+    image = models.ImageField(upload_to='recettes/', null=True, blank=True)
 
     titre = models.CharField(max_length=100)
 

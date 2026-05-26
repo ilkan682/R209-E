@@ -6,6 +6,7 @@ from .forms import IngredientForm, RecetteForm
 from .models import Recette
 
 
+
 def index(request):
     return render(request, 'myapp/index.html')
 
@@ -30,7 +31,7 @@ def recette_form(request):
 
     if request.method == "POST":
 
-        form = RecetteForm(request.POST)
+        form = RecetteForm(request.POST, request.FILES)
 
         if form.is_valid():
             form.save()

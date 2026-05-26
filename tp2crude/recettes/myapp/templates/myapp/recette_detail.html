@@ -30,6 +30,9 @@
 <br><br>
 
 <a href="{% url 'index' %}">🏠 Retour accueil</a>
+{% if recette.image %}
+    <img src="{{ recette.image.url }}" width="300">
+{% endif %}
 
 </body>
 </html>
