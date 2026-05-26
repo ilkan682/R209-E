@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste recettes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+<h1>Liste des recettes</h1>
+
+<ul>
+{% for r in recettes %}
+    <li>
+        {{ r.titre }} - {{ r.createur }}
+
+        <a href="{% url 'recette_detail' r.id %}">Voir</a>
+        <a href="{% url 'recette_delete' r.id %}">Supprimer</a>
+    </li>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'index' %}">🏠 Retour accueil</a>
+</body>
+</html>
